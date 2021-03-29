@@ -47,8 +47,10 @@ class GuessingGame implements ActionListener {
       guessNumber();
     else if(ae.getActionCommand().equals("Play Again"))
       reset();
-    else if(ae.getActionCommand().equals("myTF"))
-      guessNumber();
+    else if(ae.getActionCommand().equals("myTF")) {
+      directLabel.setText("You pressed Enter. Please press the Guess Button.");
+      frame.setSize(400, 120);
+    }
   }
 
   public void guessNumber() {
